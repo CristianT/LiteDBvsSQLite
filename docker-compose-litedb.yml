@@ -1,0 +1,16 @@
+version: '3.2'
+services:
+  litedbrun:
+    build:
+      context: .
+      dockerfile: ./LiteDBRun/Dockerfile
+    ports:
+      - "5724:5724"
+    container_name: litedbrun
+    hostname: litedbrun
+    networks: 
+        - litdbvssqlitenetwork
+
+networks:
+  litdbvssqlitenetwork:
+    driver: bridge

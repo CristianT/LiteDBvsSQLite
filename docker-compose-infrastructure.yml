@@ -1,0 +1,38 @@
+version: '3.2'
+services:
+  prometheus:
+    image: prom/prometheus:v2.17.2
+    ports:
+      - "9090:9090"
+    container_name: prometheus
+    hostname: prometheus
+    volumes:
+      - type: bind
+        source: ./config/prometheus.yml
+        target: /etc/prometheus/prometheus.yml
+        read_only: true
+      - prometheus:/prometheus
+    networks:
+        - litdbvssqlitenetwork
+
+  grafana:
+    image : grafana/grafana:6.7.3
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana_var:/var/lib/grafana
+      - grafana_etc:/etc/grafana/provisioning/
+    environment: 
+      GF_SECURITY_ADMIN_PASSWORD: "admin"
+      GF_USERS_ALLOW_SIGN_UP: "false"
+    networks:
+      - litdbvssqlitenetwork
+
+networks:
+  litdbvssqlitenetwork:
+    driver: bridge
+
+volumes:
+  prometheus:
+  grafana_var:
+  grafana_etc:
