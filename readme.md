@@ -46,7 +46,7 @@ It inserting rate was:
 * Max: 4655 objects/second
 * Avg: 4359 objects/second
 
-There is no tendency observed, the rate remains quite stable, and actually on of the highest rates is at the end of the run.
+There is no tendency observed, the rate remains quite stable, and actually one of the highest rates is at the end of the run.
 
 The final Database size was ~130MB for 1 million records
 
@@ -57,8 +57,10 @@ And the used memory was:
 
 ## SQLite Results
 I stopped the run before it finished but here is the intermediate result:
+
 It took 35.70 minutes to insert 25687 records, for the 1 million records it would have taken at this rate around 1 day, 
-but this is false due to the next data:
+but this is false due to the next:
+
 It inserting rate was:
 * Min: 6 objects/second
 * Max: 23 objects/second
