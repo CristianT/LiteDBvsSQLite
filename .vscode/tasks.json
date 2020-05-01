@@ -7,7 +7,7 @@
                 "type": "process",
                 "args": [
                     "build",
-                    "${workspaceFolder}/LiteDBRun//LiteDBRun.csproj"
+                    "${workspaceFolder}/SqLiteDBRun//SqliteDBRun.csproj"
                 ],
                 "problemMatcher": "$msCompile"
             }

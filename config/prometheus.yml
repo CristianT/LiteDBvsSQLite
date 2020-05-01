@@ -14,3 +14,7 @@ scrape_configs:
   - job_name: litedbrun
     static_configs:
       - targets: ['litedbrun:5724']
+  
+  - job_name: sqliterun
+    static_configs:
+      - targets: ['sqliterun:5725']

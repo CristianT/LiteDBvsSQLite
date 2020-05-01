@@ -7,9 +7,9 @@
                  "type": "coreclr",
                  "request": "launch",
                  "preLaunchTask": "build",
-                 "program": "${workspaceFolder}/LiteDBRun//bin/Debug/netcoreapp3.1/LiteDBRun.dll",
+                 "program": "${workspaceFolder}/SqLiteDBRun//bin/Debug/netcoreapp3.1/SqliteDBRun.dll",
                  "args": [],
-                 "cwd": "${workspaceFolder}/LiteDBRun/",
+                 "cwd": "${workspaceFolder}/SqLiteDBRun/",
                  "console": "externalTerminal",
                  "stopAtEntry": false,
                  "internalConsoleOptions": "openOnSessionStart"

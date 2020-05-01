@@ -1,0 +1,16 @@
+version: '3.2'
+services:
+  sqliterun:
+    build:
+      context: .
+      dockerfile: ./SqLiteDBRun/Dockerfile
+    ports:
+      - "5725:5725"
+    container_name: sqliterun
+    hostname: sqliterun
+    networks: 
+        - litdbvssqlitenetwork
+
+networks:
+  litdbvssqlitenetwork:
+    driver: bridge

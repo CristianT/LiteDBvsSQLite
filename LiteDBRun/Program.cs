@@ -6,7 +6,7 @@ using Common;
 using LiteDB;
 using Prometheus;
 
-namespace MetricServiceHub
+namespace LiteDBRun
 {
     class Program
     {
@@ -20,12 +20,6 @@ namespace MetricServiceHub
                 // Run test
                 string dbName = Guid.NewGuid().ToString();
 
-                var obj = new ExampleObject()
-                {
-                    Name = "example name",
-                    Value = 1234567890
-                };
-
                 using var db = new LiteDatabase($"Filename={dbName};");
                 
                 Task.Run(() =>
@@ -37,13 +31,22 @@ namespace MetricServiceHub
                     }
                 });
 
-                // Insert 10M of objects
+                // Insert 1M of objects
                 var insertCollection = db.GetCollection<ExampleObject>("insertData");
-                for(int i = 0;i<10000000;i++)
+                Log("Insert 1000000 of objects");
+                for(int i = 0;i<1000000;i++)
                 {
+                    var obj = new ExampleObject()
+                    {
+                        Name = "example name",
+                        Value = 1234567890
+                    };
+
                     insertCollection.Insert(obj);
                     InsertObjectCounter.Inc();
                 }
+
+                Log("Process finished");
 
             }
             catch(Exception ex)
@@ -52,7 +55,7 @@ namespace MetricServiceHub
             }
         }
 
-        private static Counter InsertObjectCounter = Metrics.CreateCounter("insert_object", "Number of Inserted objects.");
+        private static Counter InsertObjectCounter = Metrics.CreateCounter("database_insert_object", "Number of Inserted objects.");
         private static Gauge DatabaseSize = Metrics.CreateGauge("database_size", "Number of Inserted objects.");
 
         private static void Log(string s)

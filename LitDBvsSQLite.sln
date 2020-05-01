@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteDBRun", "LiteDBRun\Lite
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{B73AD787-E0B5-4DE3-B634-A35184A80888}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqliteDBRun", "SqLiteDBRun\SqLiteDBRun.csproj", "{967D980D-F252-4CF2-BC25-CA593BC1FEBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{B73AD787-E0B5-4DE3-B634-A35184A80888}.Release|x64.Build.0 = Release|Any CPU
 		{B73AD787-E0B5-4DE3-B634-A35184A80888}.Release|x86.ActiveCfg = Release|Any CPU
 		{B73AD787-E0B5-4DE3-B634-A35184A80888}.Release|x86.Build.0 = Release|Any CPU
+		{967D980D-F252-4CF2-BC25-CA593BC1FEBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{967D980D-F252-4CF2-BC25-CA593BC1FEBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{967D980D-F252-4CF2-BC25-CA593BC1FEBE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{967D980D-F252-4CF2-BC25-CA593BC1FEBE}.Debug|x64.Build.0 = Debug|Any CPU
+		{967D980D-F252-4CF2-BC25-CA593BC1FEBE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{967D980D-F252-4CF2-BC25-CA593BC1FEBE}.Debug|x86.Build.0 = Debug|Any CPU
+		{967D980D-F252-4CF2-BC25-CA593BC1FEBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{967D980D-F252-4CF2-BC25-CA593BC1FEBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{967D980D-F252-4CF2-BC25-CA593BC1FEBE}.Release|x64.ActiveCfg = Release|Any CPU
+		{967D980D-F252-4CF2-BC25-CA593BC1FEBE}.Release|x64.Build.0 = Release|Any CPU
+		{967D980D-F252-4CF2-BC25-CA593BC1FEBE}.Release|x86.ActiveCfg = Release|Any CPU
+		{967D980D-F252-4CF2-BC25-CA593BC1FEBE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
